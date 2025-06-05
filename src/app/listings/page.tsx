@@ -11,7 +11,7 @@ interface Property {
   district: string
   zoning: string
   area: number
-  rentalPrice: number | {
+  rentalPrice: {
     min: number
     max: number
   }
@@ -174,10 +174,7 @@ export default function ListingsPage() {
                 <div className="col-span-1 md:col-span-3 flex md:block justify-between items-center">
                   <span className="md:hidden text-gray-700 font-medium">Rental Price:</span>
                   <span className="text-gray-900">
-                    {typeof property.rentalPrice === 'number' 
-                      ? `$${property.rentalPrice.toFixed(2)}/psf`
-                      : `$${(property.rentalPrice as { min: number; max: number }).min.toFixed(2)}-${(property.rentalPrice as { min: number; max: number }).max.toFixed(2)}/psf`
-                    }
+                    {`$${property.rentalPrice.min.toFixed(2)}-${property.rentalPrice.max.toFixed(2)}/psf`}
                   </span>
                 </div>
                 <div className="col-span-1 md:col-span-2 flex md:block justify-center md:justify-end">
