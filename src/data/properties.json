@@ -1,0 +1,147 @@
+{
+  "properties": [
+    {
+      "id": "P001",
+      "title": "Spacious ground level factory",
+      "district": "Tuas Industrial Estate",
+      "zoning": "North",
+      "area": 5000,
+      "rentalPrice": {
+        "min": 8.00,
+        "max": 9.50
+      },
+      "qualification": "MAS Certified",
+      "image": "/images/listings-sources/Near-IMM-11-Loading-Bays-5-3m-Clear-Height-Boon-Lay-Jurong-Tuas-Singapore_processed.jpg"
+    },
+    {
+      "id": "P002",
+      "title": "Modern industrial space",
+      "district": "Jurong Industrial Estate",
+      "zoning": "West",
+      "area": 3500,
+      "rentalPrice": {
+        "min": 9.00,
+        "max": 9.75
+      },
+      "qualification": "MAS Qualified",
+      "image": "/images/listings-sources/High-Ceiling-West-Park-BizCentral-40ft-To-Door-Ramp-Up-Boon-Lay-Jurong-Tuas-Singapore_processed.jpg"
+    },
+    {
+      "id": "P003",
+      "title": "High-ceiling warehouse",
+      "district": "Woodlands Industrial Park",
+      "zoning": "North",
+      "area": 6000,
+      "rentalPrice": {
+        "min": 7.50,
+        "max": 8.25
+      },
+      "qualification": "MAS Certified",
+      "image": "/images/listings-sources/8m-high-production-b2-facility-with-high-tension-1400amps-Ang-Mo-Kio-Bishan-Thomson-Singapore_processed.jpg"
+    },
+    {
+      "id": "P004",
+      "title": "Prime industrial unit",
+      "district": "Kaki Bukit Industrial Estate",
+      "zoning": "East",
+      "area": 4200,
+      "rentalPrice": {
+        "min": 8.75,
+        "max": 9.25
+      },
+      "qualification": "MAS Qualified",
+      "image": "/images/listings-sources/63-Ubi-Eunos-Geylang-Paya-Lebar-Singapore_processed.jpg"
+    },
+    {
+      "id": "P005",
+      "title": "Tech-ready facility",
+      "district": "Ubi Techpark",
+      "zoning": "East",
+      "area": 4800,
+      "rentalPrice": {
+        "min": 9.25,
+        "max": 9.75
+      },
+      "qualification": "MAS Certified",
+      "image": "/images/listings-sources/Amtech-Building-Ang-Mo-Kio-Bishan-Thomson-Singapore_processed.jpg"
+    },
+    {
+      "id": "P006",
+      "title": "Logistics hub space",
+      "district": "Changi North Industrial Estate",
+      "zoning": "East",
+      "area": 5500,
+      "rentalPrice": {
+        "min": 8.00,
+        "max": 8.50
+      },
+      "qualification": "MAS Qualified",
+      "image": "/images/listings-sources/Loyang-Industrial-Estate-Changi-Airport-Changi-Village-Singapore_processed.jpg"
+    },
+    {
+      "id": "P007",
+      "title": "Manufacturing facility",
+      "district": "Ang Mo Kio Industrial Park",
+      "zoning": "North",
+      "area": 3800,
+      "rentalPrice": {
+        "min": 7.50,
+        "max": 8.00
+      },
+      "qualification": "MAS Certified",
+      "image": "/images/listings-sources/Enterprise-Centre-Dairy-Farm-Bukit-Panjang-Choa-Chu-Kang-Singapore_processed.jpg"
+    },
+    {
+      "id": "P008",
+      "title": "Industrial workshop",
+      "district": "Defu Industrial Estate",
+      "zoning": "East",
+      "area": 4500,
+      "rentalPrice": {
+        "min": 9.25,
+        "max": 9.50
+      },
+      "qualification": "MAS Qualified",
+      "image": "/images/listings-sources/B2-Space-at-Bulim-Square-Jurong-West-Boon-Lay-Jurong-Tuas-Singapore_processed.jpg"
+    },
+    {
+      "id": "P009",
+      "title": "Production space",
+      "district": "Eunos Industrial Estate",
+      "zoning": "East",
+      "area": 4000,
+      "rentalPrice": {
+        "min": 8.25,
+        "max": 8.75
+      },
+      "qualification": "MAS Certified",
+      "image": "/images/listings-sources/10-Pandan-Crescent-Buona-Vista-West-Coast-Clementi-New-Town-Singapore_processed.jpg"
+    },
+    {
+      "id": "P010",
+      "title": "Industrial complex",
+      "district": "Tagore Industrial Estate",
+      "zoning": "North",
+      "area": 5200,
+      "rentalPrice": {
+        "min": 7.75,
+        "max": 8.25
+      },
+      "qualification": "MAS Qualified",
+      "image": "/images/listings-sources/LINER-Boon-Lay-Jurong-Tuas-Singapore_processed.jpg"
+    },
+    {
+      "id": "P011",
+      "title": "Pretty Industrial Area with Sheltered Loading Bay",
+      "district": "Defu Industrial Estate",
+      "zoning": "North-East",
+      "area": 5200,
+      "rentalPrice": {
+        "min": 7.75,
+        "max": 8.25
+      },
+      "qualification": "MAS Qualified",
+      "image": "/images/listings-sources/B2-Space-at-Bulim-Square-Jurong-West-Boon-Lay-Jurong-Tuas-Singapore (1)_processed.jpg"
+    }
+  ]
+} 
