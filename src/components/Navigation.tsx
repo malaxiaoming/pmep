@@ -2,9 +2,16 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+
+  // Close mobile menu when route changes
+  React.useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
 
   return (
     <nav className="bg-white shadow-md relative">
