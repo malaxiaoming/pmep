@@ -32,9 +32,9 @@ export default function MarinaBayCaseStudy() {
             <section>
               <h2 className="text-3xl font-bold mb-4">Project Overview</h2>
               <p className="text-gray-600 leading-relaxed">
-                The Marina Bay Financial Centre (MBFC) is a premier integrated development in Singapore's 
+                The Marina Bay Financial Centre (MBFC) is a premier integrated development in Singapore&apos;s 
                 central business district. Our PMEP solutions played a crucial role in achieving the 
-                project's sustainability goals while ensuring optimal building performance.
+                project&apos;s sustainability goals while ensuring optimal building performance.
               </p>
             </section>
 
@@ -59,7 +59,7 @@ export default function MarinaBayCaseStudy() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Sustainable Materials</h3>
                   <p className="text-gray-600">
-                    Utilized eco-friendly materials in MEP components, contributing to the building's 
+                    Utilized eco-friendly materials in MEP components, contributing to the building&apos;s 
                     LEED Platinum certification.
                   </p>
                 </div>

@@ -32,9 +32,9 @@ export default function ShanghaiTowerCaseStudy() {
             <section>
               <h2 className="text-3xl font-bold mb-4">Project Overview</h2>
               <p className="text-gray-600 leading-relaxed">
-                As the world's second-tallest building, the Shanghai Tower presented unique challenges 
-                in MEP implementation. Our PMEP solutions were crucial in creating a sustainable and 
-                efficient vertical city that stands as a testament to engineering innovation.
+                The Shanghai Tower is China&apos;s tallest building and a testament to sustainable 
+                skyscraper design. Our PMEP solutions were crucial in achieving the building&apos;s 
+                ambitious environmental goals.
               </p>
             </section>
 
@@ -53,7 +53,7 @@ export default function ShanghaiTowerCaseStudy() {
                   <h3 className="text-xl font-semibold mb-2">Energy Management</h3>
                   <p className="text-gray-600">
                     Developed a comprehensive energy management system that includes double-skin facade 
-                    technology, geothermal heating/cooling, and wind turbines integrated into the building's 
+                    technology, geothermal heating/cooling, and wind turbines integrated into the building&apos;s 
                     design.
                   </p>
                 </div>
@@ -62,7 +62,7 @@ export default function ShanghaiTowerCaseStudy() {
                   <p className="text-gray-600">
                     Implemented an advanced building automation system that monitors and controls all 
                     MEP systems, optimizing performance and reducing energy consumption throughout the 
-                    building's lifecycle.
+                    building&apos;s lifecycle.
                   </p>
                 </div>
               </div>
@@ -87,6 +87,14 @@ export default function ShanghaiTowerCaseStudy() {
                   <p className="text-gray-600">Reduction in carbon emissions</p>
                 </div>
               </div>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold mb-4">Building Features</h2>
+              <p className="text-gray-600">
+                The building&apos;s innovative design and advanced MEP systems have set new standards 
+                for sustainable high-rise construction.
+              </p>
             </section>
           </div>
 
