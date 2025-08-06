@@ -1,6 +1,9 @@
+// This is a duplicate of the About page for stakeholder comparison.
+// You can modify this page independently from the original About page.
+
 import Link from 'next/link'
 
-export default function AboutPage() {
+export default function About2Page() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -26,7 +29,49 @@ export default function AboutPage() {
 
 
 
+        {/* Partners & Pilots Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Partners & Pilots</h2>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700 mb-8">
+              We collaborate with leading construction companies, developers, and government agencies to pilot and refine our DfMA solutions.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {/* Placeholder logos for pilot partners */}
+              <div className="w-full h-20 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-bold border">
+                Partner Logo
+              </div>
+              <div className="w-full h-20 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-bold border">
+                Partner Logo
+              </div>
+              <div className="w-full h-20 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-bold border">
+                Partner Logo
+              </div>
+              <div className="w-full h-20 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-bold border">
+                Partner Logo
+              </div>
+            </div>
+          </div>
+        </section>
 
+        {/* Testimonials Section (MODIFIED) */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">What Industry Leaders Say About DfMA</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-700 italic mb-4">
+                "DfMA is transforming the way we think about construction — faster delivery, higher quality, and safer worksites."
+              </p>
+              <div className="text-right text-gray-900 font-semibold">– Dr. John Keung, Former CEO, BCA Singapore</div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-700 italic mb-4">
+                "Adopting DfMA is not just about productivity—it's about being future-ready in a competitive construction landscape."
+              </p>
+              <div className="text-right text-gray-900 font-semibold">– Tan Swee Yiow, CEO, Keppel Land (via media interview)</div>
+            </div>
+          </div>
+        </section>
 
         {/* Case Study Section */}
         <section className="mb-16">

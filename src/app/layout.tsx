@@ -2,12 +2,15 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
+import { siteConfig } from '@/config/site'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'PMEP - Prefabricated MEP Solutions',
-  description: 'Your authoritative source for Prefabricated MEP information, standards, and best practices',
+  title: siteConfig.seo.title,
+  description: siteConfig.seo.description,
+  keywords: [...siteConfig.seo.keywords],
 }
 
 export default function RootLayout({
@@ -22,6 +25,7 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )
