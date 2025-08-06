@@ -196,6 +196,7 @@ export default function Home() {
                   <div className="text-right">
                     <p className="font-semibold text-gray-900">— Sarah K.</p>
                     <p className="text-gray-600 text-sm">Consulting Firm Partner</p>
+                    
                   </div>
                 </div>
               </div>
