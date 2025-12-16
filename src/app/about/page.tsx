@@ -1,12 +1,25 @@
 import Link from 'next/link'
+import { primaryBtn, secondaryBtn } from '@/components/ui/buttons'
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">About Prefab Live</h1>
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy to-brand-navyDark text-white py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_#1479FF_0,_transparent_60%)]" />
+        <div className="relative max-w-5xl mx-auto text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">About Prefab Live</h1>
+          <p className="text-base md:text-lg text-white/80 mb-8">
+            Learn how PrefabLive connects DfMA-ready factories, digital platforms and expert consultancy into one ecosystem.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/listings" className={primaryBtn}>
+              Browse Factory Space
+            </Link>
+            <Link href="/consultancy" className={secondaryBtn}>
+              Explore Consultancy
+            </Link>
+          </div>
         </div>
       </section>
 

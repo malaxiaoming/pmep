@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { primaryBtn } from '@/components/ui/buttons'
 
 export default function ProjectPlanningPage() {
   const [formData, setFormData] = useState({
@@ -28,22 +29,28 @@ export default function ProjectPlanningPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-brand-bg">
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Project Planning</h1>
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-            Early integration of design, production, and logistics for efficient DfMA project delivery
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy to-brand-navyDark text-white py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_#1479FF_0,_transparent_60%)]" />
+        <div className="relative max-w-5xl mx-auto text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Project Planning</h1>
+          <p className="text-base md:text-lg text-white/80 mb-8 max-w-3xl mx-auto">
+            Align design, production and site logistics early to de-risk DfMA projects and hit productivity targets.
           </p>
+          <div className="flex justify-center">
+            <a href="#quote" className={primaryBtn}>
+              Plan My DfMA Project
+            </a>
+          </div>
         </div>
       </section>
 
       <div className="container mx-auto px-4 py-12">
         {/* Overview Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Overview</h2>
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4 text-center">Overview</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed">
               Planning a DfMA-based project requires early integration of design, production, and logistics. We help stakeholders embed DfMA into the pre-construction and construction phases—mitigating risks and delivering efficient, cost-effective builds aligned with BCA's productivity roadmap.
             </p>
@@ -52,24 +59,24 @@ export default function ProjectPlanningPage() {
 
         {/* Who It's For Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Who It's For</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4 text-center">Who It&apos;s For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col items-center text-center">
               <div className="text-7xl mb-2">🏢</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Developers & Consultants</h3>
               <p className="text-gray-700">Seeking DfMA integration expertise</p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col items-center text-center">
               <div className="text-7xl mb-2">👷</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Main Contractors</h3>
               <p className="text-gray-700">And DfMA coordinators</p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col items-center text-center">
               <div className="text-7xl mb-2">🏗️</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Architects & ID Consultants</h3>
               <p className="text-gray-700">Needing DfMA alignment</p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col items-center text-center">
               <div className="text-7xl mb-2">🧑‍🔧</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Prefab Specialists</h3>
               <p className="text-gray-700">Planning for long-lead items</p>
@@ -79,30 +86,30 @@ export default function ProjectPlanningPage() {
 
         {/* Tall Card Who It's For Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Who It's For (Tall Cards)</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4 text-center">Who It&apos;s For (Tall Cards)</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
+            <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
               <div>
                 <div className="text-7xl mb-4">🏢</div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Developers & Consultants</h3>
                 <p className="text-gray-700">Seeking DfMA integration expertise</p>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
+            <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
               <div>
                 <div className="text-7xl mb-4">👷</div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Main Contractors</h3>
                 <p className="text-gray-700">And DfMA coordinators</p>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
+            <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
               <div>
                 <div className="text-7xl mb-4">🏗️</div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Architects & ID Consultants</h3>
                 <p className="text-gray-700">Needing DfMA alignment</p>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
+            <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center min-h-[350px] h-full justify-between">
               <div>
                 <div className="text-7xl mb-4">🧑‍🔧</div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Prefab Specialists</h3>
@@ -114,30 +121,30 @@ export default function ProjectPlanningPage() {
 
         {/* What You Get Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">What You Get (Deliverables)</h2>
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4 text-center">What You Get (Deliverables)</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <p className="text-gray-700">Precast and MEP sequencing strategy</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <p className="text-gray-700">DfMA-fitted BIM planning</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <p className="text-gray-700">Off-site logistics and on-site assembly planning</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <p className="text-gray-700">Shop drawing coordination</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-brand-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <p className="text-gray-700">Integrated timeline with main construction program</p>
                 </div>
               </div>
@@ -147,21 +154,21 @@ export default function ProjectPlanningPage() {
 
         {/* Process & Timeline Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Process & Timeline</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4 text-center">Process &amp; Timeline</h2>
           <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Design Review (Week 1–2)</h3>
               <p className="text-gray-700">Assess buildability and prefabrication potential</p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Planning Phase (Week 3–5)</h3>
               <p className="text-gray-700">Develop logistics and integration plans</p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Coordination (Week 6–8)</h3>
               <p className="text-gray-700">Sync factory and site deliverables</p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Monitoring & Revisions (Ongoing)</h3>
               <p className="text-gray-700">Adapt to real-world project demands</p>
             </div>
@@ -169,9 +176,9 @@ export default function ProjectPlanningPage() {
         </section>
 
         {/* Get a Quote Form */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Get a Quote</h2>
-          <div className="bg-white rounded-lg shadow-md p-8">
+        <section id="quote" className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4 text-center">Get a Quote</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -271,7 +278,7 @@ export default function ProjectPlanningPage() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+                  className={primaryBtn}
                 >
                   Get Quote
                 </button>
@@ -282,7 +289,7 @@ export default function ProjectPlanningPage() {
 
         {/* Back to Consultancy */}
         <div className="text-center">
-          <Link href="/consultancy" className="text-blue-600 hover:text-blue-800 font-semibold">
+          <Link href="/consultancy" className="text-brand-blue hover:text-brand-blueDark font-semibold">
             ← Back to Consultancy Services
           </Link>
         </div>

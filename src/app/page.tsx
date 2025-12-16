@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { primaryBtn, secondaryBtn } from "@/components/ui/buttons";
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -57,21 +58,25 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy to-brand-navyDark text-white py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_#1479FF_0,_transparent_60%)]" />
+        <div className="relative max-w-5xl mx-auto text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
             PrefabLive: Gateway to DfMA
           </h1>
-          <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
+          <p className="text-base md:text-lg text-white/80 mb-8">
+            Bridge DfMA-ready factory space, digital platforms and consultancy under one ecosystem.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/about"
-              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-100 transition text-lg shadow"
+              className={secondaryBtn}
             >
               What is DfMA?
             </Link>
             <Link
               href="/listings"
-              className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition text-lg border border-white shadow"
+              className={primaryBtn}
             >
               Browse Factory Space
             </Link>
@@ -80,50 +85,50 @@ export default function Home() {
       </section>
 
       {/* Three-Column Snapshot */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-16 bg-brand-bg">
+        <div className="max-w-6xl mx-auto px-4 -mt-10 relative z-10">
+          <div className="grid gap-6 md:grid-cols-3">
             {/* Factory Space */}
-            <div className="bg-white rounded-lg shadow-md p-8 flex flex-col items-center text-center">
-              <h3 className="text-2xl font-semibold mb-3">Factory Space</h3>
-              <p className="text-gray-700 mb-6">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 border-t-4 border-t-brand-blue p-6 flex flex-col">
+              <h3 className="text-lg font-semibold text-brand-navy mb-2">Factory Space</h3>
+              <p className="text-sm text-slate-600 mb-4">
                 Find MEP-ready factories, PPVC & precast options coming soon.
               </p>
-              <button
-                disabled
-                className="bg-gray-400 text-white px-6 py-2 rounded-md font-semibold cursor-not-allowed opacity-60"
+              <Link
+                href="/listings"
+                className="mt-auto inline-flex text-sm font-semibold text-brand-blue hover:text-brand-blueDark"
               >
-                Coming soon
-              </button>
+                View Listings →
+              </Link>
             </div>
             {/* Digital Platform */}
-            <div className="bg-white rounded-lg shadow-md p-8 flex flex-col items-center text-center">
-              <h3 className="text-2xl font-semibold mb-3">Digital Platform</h3>
-              <p className="text-gray-700 mb-6">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 border-t-4 border-t-brand-orange p-6 flex flex-col">
+              <h3 className="text-lg font-semibold text-brand-navy mb-2">Digital Platform</h3>
+              <p className="text-sm text-slate-600 mb-4">
                 Bridge production and site with our plug-and-play IDD platform.
               </p>
               <a
                 href="https://idd.prefab.live"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
+                className="mt-auto inline-flex text-sm font-semibold text-brand-blue hover:text-brand-blueDark"
               >
-                Go IDD
+                Go to IDD Platform →
               </a>
             </div>
             {/* Consultancy & Certification */}
-            <div className="bg-white rounded-lg shadow-md p-8 flex flex-col items-center text-center">
-              <h3 className="text-2xl font-semibold mb-3">
-                Consultancy & Certification
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 border-t-4 border-t-brand-navyDark p-6 flex flex-col">
+              <h3 className="text-lg font-semibold text-brand-navy mb-2">
+                Consultancy &amp; Certification
               </h3>
-              <p className="text-gray-700 mb-6">
-                End-to-end DfMA setup, training & accreditation.
+              <p className="text-sm text-slate-600 mb-4">
+                End-to-end DfMA setup, training &amp; accreditation.
               </p>
               <Link
                 href="/consultancy"
-                className="bg-blue-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
+                className="mt-auto inline-flex text-sm font-semibold text-brand-blue hover:text-brand-blueDark"
               >
-                Explore Services
+                Explore Consultancy →
               </Link>
             </div>
           </div>
@@ -131,19 +136,18 @@ export default function Home() {
       </section>
 
       {/* Flexible Leasing Made Simple Section */}
-      <section className="py-16 bg-white">
+      <section className="bg-brand-bg py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Main Heading */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4 text-center">
                 Flexible Leasing Made Simple: Your Next Business Space Awaits
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                Finding the right commercial space shouldn't tie up your cash or
-                your plans. Our innovative prefabricated leasing solution is
-                built to give growing businesses the flexibility they
-                need—without the heavy upfront costs or long-term commitments.
+              <p className="max-w-3xl mx-auto text-sm md:text-base text-slate-700 text-center">
+                Finding the right commercial space shouldn't tie up your cash or your plans. Our
+                innovative prefabricated leasing solution is built to give growing businesses the
+                flexibility they need—without the heavy upfront costs or long-term commitments.
               </p>
             </div>
 

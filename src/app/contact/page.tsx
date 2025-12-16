@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import emailjs from '@emailjs/browser'
 import { siteConfig } from '@/config/site'
+import { primaryBtn, secondaryBtn } from '@/components/ui/buttons'
 
 interface ContactFormData {
   name: string
@@ -65,24 +66,41 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-brand-bg">
       {/* Hero Section */}
-      <div className="relative h-[40vh] w-full bg-blue-900">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl md:text-2xl">Get in Touch with Our Team</p>
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy to-brand-navyDark text-white py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_#1479FF_0,_transparent_60%)]" />
+        <div className="relative max-w-5xl mx-auto text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Contact Us</h1>
+          <p className="text-base md:text-lg text-white/80 mb-8">
+            Reach out to the PrefabLive team for leasing, consultancy or technical questions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#contact-form" className={primaryBtn}>
+              Send Us a Message
+            </a>
+            <a
+              href={`https://wa.me/6591099623?text=Hi,%20I'd%20like%20to%20know%20more%20about%20PrefabLive.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={secondaryBtn}
+            >
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-8 md:px-12">
+      <section id="contact-form" className="py-16">
+        <div className="max-w-6xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="px-4 md:px-6">
-              <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
+            <div className="px-4 md:px-6 bg-white rounded-2xl shadow-sm border border-slate-100 py-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4">Send Us a Message</h2>
+              <p className="text-sm md:text-base text-slate-700 mb-6">
+                Share a bit about your project, and we&apos;ll connect you with the right person on the PrefabLive team.
+              </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -191,7 +209,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition disabled:opacity-50"
+                  className={`w-full ${primaryBtn} disabled:opacity-50`}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
@@ -199,13 +217,13 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Information */}
-            <div className="px-4 md:px-6">
-              <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
+            <div className="px-4 md:px-6 bg-white rounded-2xl shadow-sm border border-slate-100 py-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-brand-navy mb-4">Contact Information</h2>
               
               <div className="space-y-8">
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Headquarters</h3>
-                  <div className="space-y-2 text-gray-600">
+                  <div className="space-y-2 text-slate-700">
                     <p>2 Venture Drive #14-02, Vision Exchange</p>
                     <p>Singapore 608526</p>
                     <p>Phone: {siteConfig.contact.phone}</p>
@@ -215,7 +233,7 @@ export default function ContactPage() {
 
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
-                  <div className="space-y-2 text-gray-600">
+                  <div className="space-y-2 text-slate-700">
                     <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p>Saturday: 9:00 AM - 1:00 PM</p>
                     <p>Sunday: Closed</p>
@@ -223,16 +241,16 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
-                    <a href={siteConfig.social.facebook} className="text-gray-600 hover:text-blue-600">
+                    <a href={siteConfig.social.facebook} className="text-slate-500 hover:text-brand-blue">
                       <span className="sr-only">Facebook</span>
                       <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                       </svg>
                     </a>
                     {siteConfig.social.linkedin && (
-                      <a href={siteConfig.social.linkedin} className="text-gray-600 hover:text-blue-600">
+                      <a href={siteConfig.social.linkedin} className="text-slate-500 hover:text-brand-blue">
                         <span className="sr-only">LinkedIn</span>
                         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -240,7 +258,7 @@ export default function ContactPage() {
                       </a>
                     )}
                     {siteConfig.social.twitter && (
-                      <a href={siteConfig.social.twitter} className="text-gray-600 hover:text-blue-600">
+                      <a href={siteConfig.social.twitter} className="text-slate-500 hover:text-brand-blue">
                         <span className="sr-only">Twitter</span>
                         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>

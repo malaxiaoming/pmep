@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import propertiesData from '@/data/properties.json'
+import { primaryBtn, secondaryBtn } from '@/components/ui/buttons'
 
 interface Property {
   id: string
@@ -45,14 +46,23 @@ export default function ListingsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[40vh] w-full bg-blue-900">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Property Listings</h1>
-            <p className="text-xl md:text-2xl">MAS Qualified & MAS Certified Properties</p>
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy to-brand-navyDark text-white py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_#1479FF_0,_transparent_60%)]" />
+        <div className="relative max-w-5xl mx-auto text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Property Listings</h1>
+          <p className="text-base md:text-lg text-white/80 mb-8">
+            Explore MAS Qualified and MAS Certified factory spaces ready for DfMA production.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/contact" className={primaryBtn}>
+              Speak with Leasing
+            </Link>
+            <Link href="/about" className={secondaryBtn}>
+              Learn About PrefabLive
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Listings Section */}
       <section className="py-16">

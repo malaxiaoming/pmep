@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { primaryBtn } from '@/components/ui/buttons'
 
 export default function FactorySetupPage() {
   const [formData, setFormData] = useState({
@@ -30,12 +31,18 @@ export default function FactorySetupPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Factory Setup & Management</h1>
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-            Strategic planning and lean process integration for DfMA-compliant prefab factories
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy to-brand-navyDark text-white py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_#1479FF_0,_transparent_60%)]" />
+        <div className="relative max-w-5xl mx-auto text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Factory Setup & Management</h1>
+          <p className="text-base md:text-lg text-white/80 mb-8 max-w-3xl mx-auto">
+            Strategic planning, lean processes and regulatory compliance for DfMA-ready prefab factories in Singapore.
           </p>
+          <div className="flex justify-center">
+            <a href="#quote" className={primaryBtn}>
+              Get a Factory Setup Quote
+            </a>
+          </div>
         </div>
       </section>
 
@@ -203,7 +210,7 @@ export default function FactorySetupPage() {
         </section>
 
         {/* Get a Quote Form */}
-        <section className="mb-16">
+        <section id="quote" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Get a Quote</h2>
           <div className="bg-white rounded-lg shadow-md p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
